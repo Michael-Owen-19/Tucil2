@@ -75,13 +75,11 @@ else:   #loop == False
     #melakukan pencetakan semester beserta course yang diambil pada semester tersebut
     for i in range(len(CourseDict)):
         for j in range(len(CourseDict[i+1])):
-            if len(CourseDict[i+1])>1:
-                if j==0:
-                    print("Semester ",i+1," : ",CourseDict[i+1][j],end=" ")
-                else:
-                    print(", ",CourseDict[i+1][j])
+            if j==0:
+                print("Semester ",i+1," : ",end=" ")
+            if (j<len(CourseDict[i+1])-1):
+                print(CourseDict[i+1][j],", ",end=" ")
             else:
-                print("Semester ",i+1," : ",CourseDict[i+1][j])
-
+                print(CourseDict[i+1][j])
 
 
